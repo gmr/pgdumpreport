@@ -1,0 +1,9 @@
+*.egg
+*.egg-info
+*.pyc
+*.pyo
+.coverage
+build/
+dist/
+env/
+node_modules/

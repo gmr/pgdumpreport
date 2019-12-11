@@ -13,6 +13,23 @@ Installation
 
     pip3 install pgdumpreport
 
+Usage
+-----
+
+.. code-block:: bash
+
+    usage: pgdumpreport [-h] [-f FMT] [-o OUT] FILE
+
+    Output information from a pg_dump archive
+
+    positional arguments:
+      FILE                  Path to pg_dump archive
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -f FMT, --format FMT  Report output format (default: json)
+      -o OUT, --out OUT     Output destination, - for stdout (default: -)
+
 
 .. |Version| image:: https://img.shields.io/pypi/v/pgdumpreport.svg
    :target: https://pypi.python.org/pypi/pgdumpreport

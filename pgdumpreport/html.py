@@ -16,6 +16,7 @@ def as_html(data: str, output_path: pathlib.Path) -> typing.NoReturn:
             'static/{}'.format(filename)).decode('utf-8')
         if filename == 'index.html':
             for find, value in [('version', version), ('dump_data', data)]:
-                file = file.replace('%%{}%%'.format(find), value.replace('\n', ''))
+                file = file.replace(
+                    '%%{}%%'.format(find), value.replace('\n', ''))
         with (output_path / filename).open('wt') as handle:
             handle.write(file)

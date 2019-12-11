@@ -37,14 +37,14 @@ def as_json(args: argparse.Namespace,
             out: typing.TextIO,
             indent: int = 2) -> typing.NoReturn:
     json.dump({
-        "file": pathlib.Path(args.file[0]).name,
-        "dbname": dump.dbname,
-        "encoding": dump.encoding,
-        "created_at": dump.timestamp.isoformat('T'),
-        "server_version": dump.server_version,
-        "dump_version": '.'.join(str(v) for v in dump.version),
-        "pgdumpreport_version": version,
-        "entries": [
+        'file': pathlib.Path(args.file[0]).name,
+        'dbname': dump.dbname,
+        'encoding': dump.encoding,
+        'created_at': dump.timestamp.isoformat('T'),
+        'server_version': dump.server_version,
+        'dump_version': '.'.join(str(v) for v in dump.version),
+        'pgdumpreport_version': version,
+        'entries': [
             {'dump_id': e.dump_id,
              'had_dumper': e.had_dumper,
              'table_oid': e.table_oid,
@@ -69,7 +69,7 @@ def main():
     args = parse_cli_arguments()
     dump = pgdumplib.load(args.file[0])
     if args.format == 'json':
-        out = sys.stdout if args.out == '-' else  open(args.out, 'wt')
+        out = sys.stdout if args.out == '-' else open(args.out, 'wt')
         as_json(args, dump, out)
     elif args.format == 'html':
         if args.out == '-':

@@ -31,6 +31,6 @@
     "reactstrap": "^8.2.0",
     "tether": "^1.4.7",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   }
 }
